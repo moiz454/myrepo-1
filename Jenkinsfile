@@ -3,6 +3,11 @@ pipeline {
     tools {
         maven 'M2_HOME'
     }
+    
+    options {
+        checkoutToSubdirectory('source')
+    }
+    
     stages {
         stage ('Build') {
             
