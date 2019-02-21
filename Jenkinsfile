@@ -1,11 +1,7 @@
 pipeline {
-    agent none
-    options {
-        checkoutToSubdirectory('source')
-    }
+    agent any
     tools {
-        maven 'Maven-3.3.9'
-        jdk 'JDK-8'
+        maven 'M2_HOME'
     }
     stages {
         stage ('Build') {
