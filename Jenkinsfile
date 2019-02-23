@@ -16,7 +16,7 @@ pipeline {
                     sh '''mvn -Dmaven.test.failure.ignore=true clean install
                           cp -R target/*.war ansible/hello-world.war'''
                 }
-                dir ('/root/home/ec2-user') {
+                dir ('/home/ec2-user') {
                     sh 'terraform init && terraform apply -auto-approve'
                 }
             }
