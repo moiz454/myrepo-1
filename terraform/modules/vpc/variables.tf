@@ -1,3 +1,14 @@
+	variable "deploy_availability_zones" {
+  	type = "list"
+
+  default = [
+    "us-west-2a",
+    "us-west-2b",
+    "us-west-2c",
+  ]
+}
+
+
 variable "environment" {}
 
 variable "vpc_net_block" {}
